@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Distribución de Frecuencias</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; background-color: #f4f4f4; gap: 40px; }
+        table { border-collapse: collapse; width: 100%; max-width: 900px; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ddd; text-align: center; padding: 8px; }
+        th { background-color: #2c3e50; color: white; position: sticky; top: 0; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .total-row { font-weight: bold; background-color: #e2e2e2; }
+        h2 { color: #2c3e50; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>1. Datos Cualitativos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoría</th>
+                    <th>Frecuencia Absoluta ($f_i$)</th>
+                    <th>Frecuencia Relativa ($h_i$)</th>
+                    <th>Frecuencia Porcentual (%)</th>
+                </tr>
+            </thead>
+            <tbody id="body-cualitativa"></tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td>Total</td>
+                    <td>100</td>
+                    <td>1.00</td>
+                    <td>100%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>2. Datos Cuantitativos Discretos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dato ($x_i$)</th>
+                    <th>Frecuencia Absoluta ($f_i$)</th>
+                    <th>Frecuencia Acumulada ($F_i$)</th>
+                    <th>Frecuencia Relativa ($h_i$)</th>
+                    <th>Frecuencia Porcentual (%)</th>
+                </tr>
+            </thead>
+            <tbody id="body-discreta"></tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td>Total</td>
+                    <td>100</td>
+                    <td>-</td>
+                    <td>1.00</td>
+                    <td>100%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>3. Datos Cuantitativos Continuos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Intervalos ($L_i - L_s$)</th>
+                    <th>Marca de Clase ($x_i$)</th>
+                    <th>Frecuencia Absoluta ($f_i$)</th>
+                    <th>Frecuencia Acumulada ($F_i$)</th>
+                    <th>Frecuencia Relativa ($h_i$)</th>
+                    <th>Frecuencia Porcentual (%)</th>
+                </tr>
+            </thead>
+            <tbody id="body-continua"></tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2">Total</td>
+                    <td>100</td>
+                    <td>-</td>
+                    <td>1.00</td>
+                    <td>100%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <script>
+        // Función auxiliar para generar frecuencias que sumen 100
+        function generarFrecuencias(cantidad) {
+            let valores = Array.from({length: cantidad}, () => Math.random());
+            let sumaTotal = valores.reduce((a, b) => a + b, 0);
+            let abs = valores.map(v => Math.round((v / sumaTotal) * 100));
+            let diferencia = 100 - abs.reduce((a, b) => a + b, 0);
+            abs[0] += diferencia;
+            return abs;
+        }
+
+        // 1. Llenar Cualitativa
+        const f1 = generarFrecuencias(100);
+        document.getElementById('body-cualitativa').innerHTML = f1.map((f, i) => `
+            <tr>
+                <td>Marca ${i+1}</td>
+                <td>${f}</td>
+                <td>${(f/100).toFixed(2)}</td>
+                <td>${f}%</td>
+            </tr>
+        `).join('');
+
+        // 2. Llenar Discreta
+        const f2 = generarFrecuencias(100);
+        let fa2 = 0;
+        document.getElementById('body-discreta').innerHTML = f2.map((f, i) => {
+            fa2 += f;
+            return `<tr>
+                <td>${i+1}</td>
+                <td>${f}</td>
+                <td>${fa2}</td>
+                <td>${(f/100).toFixed(2)}</td>
+                <td>${f}%</td>
+            </tr>`;
+        }).join('');
+
+        // 3. Llenar Continua
+        const f3 = generarFrecuencias(100);
+        let fa3 = 0;
+        let li = 10.00;
+        let amplitud = 2.50;
+        document.getElementById('body-continua').innerHTML = f3.map((f, i) => {
+            let l_inf = li + (i * amplitud);
+            let l_sup = l_inf + amplitud;
+            fa3 += f;
+            return `<tr>
+                <td>[${l_inf.toFixed(2)} - ${l_sup.toFixed(2)})</td>
+                <td>${((l_inf + l_sup)/2).toFixed(2)}</td>
+                <td>${f}</td>
+                <td>${fa3}</td>
+                <td>${(f/100).toFixed(2)}</td>
+                <td>${f}%</td>
+            </tr>`;
+        }).join('');
+    </script>
+
+</body>
+</html>
