@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas de Distribucion de Frecuencia</title>
+
+    
+
+    <style>
+     h1, h2, h3
+        {
+            color: darkblue;
+            text-align: center;
+        }
+    </style>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+    <style>
+        th, td{
+            text-align: center;
+        }
+    </style>
+    <style>
+        table{
+             width: 90%; margin: 0 auto; border-collapse: collapse; font-size: 1.2em; padding: 15px;
+        }
+    </style>
+    <style>
+        p{
+            text-align: center;
+        }
+    </style>
+    
+    
+    
+    
+    
+</head>
+<body>
+    <h1 style="color: crimson;">Probabilidad y Estadística</h1>
+     <h2>1. Datos cuantitativos discretos</h2>
+
+    <p> En tres grupos (A, B y C) de la carrera de Tecnológias de la Información y Comunicación del ITSOEH,
+        se hizo un examen de la materia "Probabilidad y Estadística", y estos fueron los resultados
+        de los grupos evaluados:</p>
+    
+    <h3> Datos sin organizar:</h3>
+     
+    <p> 2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1, 1, 2, 4, 4, 9, 10, 1, 9, 4, 9,
+        7, 4, 8, 10, 5, 1, 3, 7, 6, 5, 3, 4, 6, 2, 2, 7, 2, 6, 6, 10, 5, 1, 8,
+        9, 2, 7, 2, 9, 5, 10, 6, 10, 4, 2, 1, 4, 5, 2, 4, 2, 7, 5, 8, 6, 3, 6,
+        6, 4, 5, 2, 10, 3, 9, 4, 3, 8, 7, 5, 9, 4, 6, 1, 4, 1, 6, 7, 5, 2, 4, 
+        10, 6, 4, 8, 7, 8, 3, 5, 3
+    </p>
+
+    <h3> Datos contados y organizados: </h3>
+
+    <p> 10, 10, 10, 10, 10, 10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9,
+        8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 
+        3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        1, 1, 1, 1, 1, 1, 1, 1, 1 </p>
+
+    
+
+    <h3>Datos transformados a tabla: </h3>
+
+    <table>
+        <tr>
+            <th> Clase </th>
+            <th> Frecuencia absoluta </th>
+            <th> Frecuencia relativa </th>
+            <th> Frecuencia acumulada </th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td> 9 </td>
+            <td> 9%</td>
+            <td> 9% </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td> 14 </td>
+            <td>  14% </td>
+            <td>  23%</td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td> 8 </td>
+            <td> 8% </td>
+            <td> 31% </td>
+        </tr>
+        <tr>
+            <td> 4 </td>
+            <td> 16 </td>
+            <td> 16% </td>
+            <td> 47%</td>
+        </tr>
+        <tr>
+            <td> 5 </td>
+            <td> 11 </td>
+            <td> 11% </td>
+            <td> 58%</td>
+        </tr>
+        <tr>
+            <td> 6 </td>
+            <td> 11 </td>
+            <td> 11%</td>
+            <td> 69% </td>
+        </tr>      
+        <tr>
+            <td> 7 </td>
+            <td> 9 </td>
+            <td> 9%</td>
+            <td> 78%</td>
+        </tr>
+        <tr>
+            <td> 8 </td>
+            <td> 6 </td>
+            <td> 6% </td>
+            <td> 84%</td>
+        </tr>
+        <tr>
+            <td> 9 </td>
+            <td> 8 </td>
+            <td> 8% </td>
+            <td> 92%</td>
+        </tr>  
+        <tr>
+            <td> 10 </td>
+            <td> 8 </td>
+            <td> 8% </td>
+            <td> 100%</td>
+        </tr>
+    </table>
+    <h3>1.1 Histograma</h3>
+
+    <img class="img_center" src="Discretos/Histograma1.png" width="500"/>
+
+    <h3>1.2 Poligono de Frecuencias</h3>
+
+    <img class="img_center" src="Discretos/Poligonodefrecuencias1.png" width="500"/>
+
+    <h3>1.3 Diagrama de barras</h3>
+
+    <img class="img_center" src="Discretos/GraficodeBarras1.png" width="500"/>
+
+    <h3>1.4 Ojiva</h3>
+
+    <img class="img_center" src="Discretos/Ojiva1.0.png" width="500"/>
+
+    <h3>1.5 Diagrama de pastel</h3>
+
+    <img class="img_center" src="Discretos/DiagramadePastel1.png" width="500"/>
+
+
+    <hr>
+   <h2>2. Datos cuantitativos continuos </h2>
+
+    <p> En colaboración con la presidencia municipal de Mixquiahuala, el ITSOEH hizo una encuesta
+        para saber el tiempo que se hacen los alumnos para llegar al instituto y así decidir si pudiera
+        ser factible el aplicar el proyecto de rentarles a los alumnos más distanciados un lugar donde quedarse
+        como parte de un apoyo y que continuen sus estudios, estos fueron los resultados en una muestra de 
+        100 alumnos (minutos/segundos): </p>
+
+    <h3> Datos ordenados y contados: </h3>
+
+    <p>18.5, 18.5, 20.0, 20.0, 20.0, 22.3, 22.3, 23.8, 23.8, 24.0, 24.0, 24.0, 24.0, 25.2,
+       25.2, 25.2, 25.2, 25.2, 25.5, 25.5, 26.0, 26.0, 26.0, 26.0, 26.0, 26.0, 27.1, 27.1, 27.1,
+       27.1, 28.4, 28.4, 28.4, 28.4, 28.4, 28.4, 28.4, 29.7, 29.7, 29.7, 29.7, 30.0, 30.0, 30.0,
+       30.0, 30.0, 30.0, 30.5, 30.5, 30.5, 30.5, 31.2, 31.2, 31.2, 31.2, 31.2, 32.6, 32.6, 32.6,
+       32.6, 32.6, 33.8, 33.8, 33.8, 33.8, 34.1, 34.1, 34.1, 34.1, 34.1, 35.3, 35.3, 35.3, 35.3,
+       35.3, 35.3, 36.0, 36.0, 36.0, 36.0, 36.0, 37.5, 37.5, 37.5, 37.5, 38.9, 38.9, 38.9, 39.4,
+       39.4, 40.2, 40.2, 40.2, 41.7, 41.7, 42.8, 42.8, 45.0, 45.0, 48.5</p>
+
+   
+
+    <h3> Datos transformados a tabla: </h3>
+
+    <table>
+        <tr>
+            <th> Clase </th>
+            <th> Limite inferior </th>
+            <th> Limite superior </th>
+            <th> Marca de clase </th>
+            <th> Frecuencia absoluta </th>
+            <th> Frecuencia relativa </th>
+            <th> Frecuencia acumulada </th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td> 15.0 </td>
+            <td> 19.9 </td>
+            <td> 17.45 </td>
+            <td> 2 </td>
+            <td> 2% </td>
+            <td> 2%</td>
+        </tr>
+         <tr>
+            <td> 2 </td>
+            <td> 20.0 </td>
+            <td> 24.9 </td>
+            <td> 22.45 </td>
+            <td> 11 </td>
+            <td> 11% </td>
+            <td> 13%</td>
+        </tr>
+         <tr>
+            <td> 3 </td>
+            <td> 25.0 </td>
+            <td> 29.9 </td>
+            <td> 27.45 </td>
+            <td> 28 </td>
+            <td> 28% </td>
+            <td> 41%</td>
+        </tr>
+         <tr>
+            <td> 4 </td>
+            <td> 30.0 </td>
+            <td> 34.9 </td>
+            <td> 32.45 </td>
+            <td> 29 </td>
+            <td> 29%</td>
+            <td> 70%</td>
+        </tr>
+         <tr>
+            <td> 5 </td>
+            <td> 35.0 </td>
+            <td> 39.9 </td>
+            <td> 37.45 </td>
+            <td> 20 </td>
+            <td> 20% </td>
+            <td> 90%</td>
+        </tr>
+         <tr>
+            <td> 6 </td>
+            <td> 40.0 </td>
+            <td> 44.9 </td>
+            <td> 42.45 </td>
+            <td> 7 </td>
+            <td> 7%</td>
+            <td> 97%</td>
+        </tr>
+         <tr>
+            <td> 7 </td>
+            <td> 45.0 </td>
+            <td> 49.9 </td>
+            <td> 47.45 </td>
+            <td> 3 </td>
+            <td> 3%</td>
+            <td> 100%</td>
+        </tr>
+        
+
+        
+    </table>
+
+    <h3>2.1 Histograma</h3>
+
+    <img class="img_center" src="Continuos/Histograma2.png" width="500"/>
+
+    <h3>2.2 Poligono de frecuencias</h3>
+
+    <img class="img_center" src="Continuos/PoligonodeFrecuencias2.png" width="500"/>
+
+    <h3> 2.3 Diagrama de barras </h3>
+
+    <img class="img_center" src="Continuos/GraficadeBarras2.png" width="500"/>
+
+    <h3> 2.4 Ojiva </h3>
+
+    <img class="img_center" src="Continuos/Ojiva2.png" width="500"/>
+
+    <h3> 2.5 Diagrama de pastel </h3>
+
+    <img class="img_center" src="Continuos/DiagramadePastel2.png" width="500"/>
+
+    <hr>
+    <h2>3. Datos cualitativos</h2>
+    
+    <p>En una encuesta de satisfacción respecto a que comida rápida es de más preferida
+       en determinado lugar, se le preguntó a 100 personas su comida rápida preferida; estos
+       fueron los resultados:</p>
+
+    <h3>Datos sin organizar:</h3>
+    
+    <p> hamburguesa, pizza, tacos, burritos, hot-dogs, tacos, pizza, hamburguesa, pizza,
+        hot-dogs, burritos, tacos, pizza, hamburguesa, hot-dogs, pizza, burritos, tacos,
+        pizza, hamburguesa, tacos, pizza, hot-dogs, burritos, hamburguesa, tacos, pizza,
+        hot-dogs, burritos, pizza, tacos, hamburguesa, pizza, hot-dogs, burritos, tacos, 
+        hamburguesa, pizza, tacos, hot-dogs, burritos, pizza, hamburguesa, tacos, pizza,
+        hot-dogs, burritos, pizza, hamburguesa, tacos, pizza, hot-dogs, burritos, tacos,
+        hamburguesa, pizza, tacos, hot-dogs, burritos, pizza, hamburguesa, pizza, hot-dogs,
+        burritos, tacos, hamburguesa, pizza, hot-dogs, burritos, tacos, pizza, hamburguesa,
+        tacos, hot-dogs, burritos, pizza, hamburguesa, tacos, pizza, hot-dogs, burritos,
+        tacos, hamburguesa, pizza, hot-dogs, burritos, pizza, tacos, hamburguesa, pizza,
+        hot-dogs, burritos, tacos, pizza, hamburguesa, hot-dogs, burritos, tacos, pizza, hamburguesa.
+    </p>
+    <h3>Datos contados y organizados:</h3>
+
+    <p>pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza,
+       pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza, pizza,
+       pizza, pizza, pizza, tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos,
+       tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos, tacos,
+       hamburguesa, hamburguesa, hamburguesa, hamburguesa, hamburguesa, hamburguesa, hamburguesa,
+       hamburguesa, hamburguesa, hamburguesa, hamburguesa, hamburguesa, hamburguesa, hamburguesa,
+       hamburguesa, hamburguesa, hamburguesa, hamburguesa, burritos, burritos, burritos, burritos,
+       burritos, burritos, burritos, burritos, burritos, burritos, burritos, burritos, burritos,
+       burritos, burritos, burritos, burritos, hot-dogs, hot-dogs, hot-dogs, hot-dogs, hot-dogs,
+       hot-dogs, hot-dogs, hot-dogs, hot-dogs, hot-dogs, hot-dogs, hot-dogs, hot-dogs, hot-dogs,
+       hot-dogs, hot-dogs, hot-dogs.</p>
+
+    
+
+    <h3>Datos transformados a tabla:</h3>
+
+    <table style="width: 500px;">
+
+        <thead>
+            <tr>
+            <th> Clase </th>
+            <th> Frecuencia absoluta </th>
+            <th> Frecuencia relativa </th>
+            <th> Frecuencia acumulada </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td> Pizza </td>
+            <td> 27 </td>
+            <td> 27% </td>
+            <td> 27%</td>
+        </tr>
+        <tr>
+            <td> Tacos </td>
+            <td> 21 </td>
+            <td> 21%</td>
+            <td> 48% </td>
+        </tr>
+        <tr>
+            <td> Hamburguesas </td>
+            <td> 18 </td>
+            <td> 18% </td>
+            <td> 66%</td>
+        </tr>
+        <tr>
+            <td> Burritos </td>
+            <td> 17 </td>
+            <td> 17%</td>
+            <td> 83%</td>
+        </tr>
+        <tr>
+            <td> Hot-dogs </td>
+            <td> 17 </td>
+            <td> 17%</td>
+            <td> 100%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3> 3.1 Histograma </h3>
+
+    <img class="img_center" src="Cualitativos/Histograma3.png" width="500"/>
+
+    <h3> 3.2 Poligono de frecuencias </h3>
+
+    <img class="img_center" src="Cualitativos/PoligonodeFrecuencias3.png" width="500"/>
+
+    <h3> 3.3 Diagrama de barras </h3>
+
+    <img class="img_center" src="Cualitativos/GraficadeBarras3.png" width="500"/>
+
+    <h3> 3.4 Ojiva </h3>
+
+    <img class="img_center" src="Cualitativos/Ojiva3.png" width="500"/>
+
+    <h3> 3.5 Diagrama de pastel </h3>
+
+    <img class="img_center" src="Cualitativos/DiagramadePastel3.png" width="500"/>
+
+    
+
+</body>
+</html>
